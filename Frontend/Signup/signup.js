@@ -23,7 +23,7 @@ btnsubmit.addEventListener("click", (e) => {
     .post("http://localhost:5555/userregister", obj)
     .then((result) => {
       if (result.data.suc == true) {
-        alert("sign up  completed ! please login into your account");
+        alert("Sign up  completed Now login into your account");
         name1.value = "";
         email1.value = "";
         phonenumber1.value = "";
@@ -33,7 +33,7 @@ btnsubmit.addEventListener("click", (e) => {
           result.data.errors[0].message == "phonenumber must be unique" ||
           "email must be unique"
         ) {
-          alert("user already exist ! please login");
+          alert("User already exist so Please login");
         }
       }
     })
