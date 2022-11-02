@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.msgbar{
+    position: fixed;
+    bottom: 0;
+    background-color: darkblue;
+    width: 80%;
+    padding: 5px;
+
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(232, 231, 231);
+
+}
+.fa-message{
+    color: rgb(225, 227, 228);
+}
+#inptext{
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: rgb(252, 253, 252);
+    border-radius: 6px;
+    font-weight: 500;
+}
+.sendmsg{
+    background-color: rgb(62, 61, 61);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    color: rgb(4, 229, 4);
+    border: 1px solid white;
+    
+}
+#gchat{
+
+color: red;
+}
+
+.msgparent{
+    margin-bottom: 80px;
+}
+
+#waytog{
+    margin-left: 1%;
+    text-decoration: none;
+    color:lightcoral;
+    font-size: 20px;
+}
+#welcomeuser{
+    color: green;
+    
+}#headmsg{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    margin-inline: 1%;
+    
+}
+#signout{
+    color:darkblue;
+    cursor: pointer;
+    
+}

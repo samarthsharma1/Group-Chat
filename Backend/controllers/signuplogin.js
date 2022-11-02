@@ -1,7 +1,7 @@
 let bcrypt = require("bcrypt");
-let User = require("../models/user");
-let jwt =require('jsonwebtoken');
-let key ="secretkey12";
+ let User = require("../models/user");
+ let jwt =require('jsonwebtoken');
+let ammananna ="db43a197a80ce2990dab5eb45d7bf4b25f3d5d1824d856ed4a186930016e85980d1f94e4944005f0a752e895c8dc6d29bcfcd9d3b60740904c826b40612e1f05";
 
 exports.postsignup = async (req, res) => {
   let { name, email, phonenumber, pwd } = req.body;
@@ -21,8 +21,7 @@ exports.postsignup = async (req, res) => {
       res.json(err);
     });
 };
-
-exports.login=async (req,res,next)=>{
+exports.postlogin = async (req, res) => {
   let { email, pwd } = req.body;
 
   let user = await User.findAll({ where: { email: email } });
@@ -37,7 +36,7 @@ exports.login=async (req,res,next)=>{
     const emailpwdmatch = await bcrypt.compare(pwd, dbpassword);
 
     if (emailpwdmatch) {
-      const token = jwt.sign(dbid, key);
+      const token = jwt.sign(dbid, ammananna);
       res.status(200).json({ msg: "login successful", token: token });
     } else {
       res.status(401).json({ msg: "something went wrong" });
